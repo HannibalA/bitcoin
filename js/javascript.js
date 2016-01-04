@@ -5,7 +5,7 @@ $('.datepicker').pickadate({
 $(document).ready(function(){
       $('.parallax').parallax();
     });
-
+var userDate = ("#userDate")
 var bitcoinApiUrl = "https://crossorigin.me/https://api.bitcoincharts.com/v1/markets.json";
 $(document).ready(function(){
   $(".btn").on("click", function(){
@@ -26,17 +26,19 @@ $(document).ready(function(){
           currencyString = currency[i].currency;
           
           //Create a string to log
-          var curObjLog = "Volume:"+volume+"\n"+"Latest Trade: "+latestTrade+"\n"+"Bid: "+bid+"\n"+"High: "+high+"\n"+"Currency: "+currencyString+"\n"+"\n"+"\n";
+          var list = "Volume:"+volume+"\n"+"Latest Trade: "+latestTrade+"\n"+"Bid: "+bid+"\n"+"High: "+high+"\n"+"Currency: "+currencyString+"\n"+"\n"+"\n";
           // log the string
-          console.log(curObjLog);
-        }
-      },
-      error:function(jqXHR, textStatus, errorThrown){
-        alert("something went wrong man!");
+          $(document).ready(function() {
+          $(".modalinfo").append(list) ;
+        })
+      }
+
+      
       }
     });
   });
 });
+
 
 
 
