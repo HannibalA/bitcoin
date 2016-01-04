@@ -16,47 +16,71 @@
         <li><a href="#">More Bitcoin Stuff</a></li>
       </ul>
     </div>
-    
   </nav>
   <!-- nav end -->
   <div class="section white">
     <div class="row container">
       <div class="input-field" class="active">
         <label for="date">Pick a date</label>
-        <input id="date" type="date" class="datepicker">
-       <button class="btn waves-effect waves-light" type="submit" name="action" id="search">Submit</button>
+        <input id="userDate" type="date" class="datepicker">
+       <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
       </div>
     </div>
   </div>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <h4> Bitcoin Information</h4>
+      <ul class="collection">
+    <li class="collection-item avatar">
+      <img src="images/yuna.jpg" alt="" class="circle">
+      <span class="title">Bitcoin</span>
+      <p>Price <br>
+         USD:
+         Mexican money:
+         Canadian money:
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle">folder</i>
+      <span class="title">BitStock</span>
+      <p> <br>
+         
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+    <li class="collection-item avatar">
+      <i class="material-icons circle green">insert_chart</i>
+      <span class="title">Weather</span>
+      <p>Tempature: <br>
+         Humdity:
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+  </ul>
+      
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+  </div>
+  <!-- Modal end -->
  <div class="parallax-container">
     <div class="parallax"><img src="pic/bitcoinmain.png"></div>
   </div>
-
-  <!-- card station -->
+  <!-- History -->
   <div class="section white">
     <div class="row container">
-        <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Weather 92 blah blah</span>
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively. and some news</p>
-            </div>
-            <div class="card-action">
-              <a href="#">more info on this day</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <p class="flow-text"></p>
     </div>
   </div>
-  <!-- card station end -->
+  <!-- History -->
   <div class="parallax-container">
     <div class="parallax"><img src="pic/bitcoin2.jpg"></div>
   </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-<script type="text/javascript" src="js/datePicker.js"></script>
-<script type="text/javascript" src="js/nytimes.js"></script>
+<script type="text/javascript" src="js/javascript.js"></script>
 </body>
 </html>
