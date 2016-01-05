@@ -10,6 +10,8 @@ var userDate = ("#userDate")
 var bitcoinApiUrl = "https://crossorigin.me/https://api.bitcoincharts.com/v1/markets.json";
 $(document).ready(function(){
   $(".btn").on("click", function(){
+    var userCurrency = $('#userCurrency option:selected').text();
+    $("#currencylabel").append(userCurrency);
     $.ajax({
       type: "GET",
       url: bitcoinApiUrl,
@@ -18,23 +20,23 @@ $(document).ready(function(){
         // loop through currency
         for (var i = 0; i < currency.length; i++) 
         {
-          var $tr = $("<tr />");
-          $tr.append( $("<td />").text(currency[i].volume) );
-          $tr.append( $("<td />").text(currency[i].latest_trade) );
-          $tr.append( $("<td />").text(currency[i].bid) );
-          $tr.append( $("<td />").text(currency[i].high) );
-          $tr.append( $("<td />").text(currency[i].currency) );
+          if(currency[i].currency == userCurrency)
+          {
+              var $tr = $("<tr />");
+              $tr.append( $("<td />").text(currency[i].volume) );
+              $tr.append( $("<td />").text(currency[i].latest_trade) );
+              $tr.append( $("<td />").text(currency[i].bid) );
+              $tr.append( $("<td />").text(currency[i].high) );
                      
-          $("#theTable tbody").append($tr);
+              $("#theTable tbody").append($tr);
+              
+          }
         }
       }
+      });
     });
   });
-})
- 
 
-        
- 
 
 
 

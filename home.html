@@ -21,10 +21,35 @@
   <!-- nav end -->
   <div class="section white">
     <div class="row container">
-      <div class="input-field" class="active">
-        <label for="date">Pick a date</label>
-        <input id="userDate" type="date" class="datepicker">
-       <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+    <!-- currency select -->
+<label class="">
+    <span class="">Pick a currency</span>
+      <select id="userCurrency" style="display: inline; width: auto; vertical-align: inherit;">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option>JPY</option>
+    <option>GBP</option>
+    <option>CHF</option>
+    <option>CAD</option>
+    <option>AUD</option>
+    <option>MXN</option>
+    <option>CNY</option>
+    <option>NZD</option>
+    <option>SEK</option>
+    <option>RUB</option>
+    <option>HKD</option>
+    <option>NOK</option>
+    <option>SGD</option>
+    <option>TRY</option>
+    <option>KRW</option>
+    <option>ZAR</option>
+    <option>BRL</option>
+    <option>INR</option>
+  </select>
+</label>
+<!-- select end -->
+       <a id="btn" class="waves-effect waves-light btn modal-trigger" href="#modal1">Bitcoin Information</a>
+       <a id="btn" class="waves-effect waves-light btn modal-trigger" href="#modal2">Help</a>
       </div>
     </div>
   </div>
@@ -33,34 +58,37 @@
     <div class="modal-content">
       <ul class="collapsible" data-collapsible="accordion">
     <li>
-      <div class="collapsible-header">USD</div>
-      <div class="collapsible-body"><table id="theTable">
-    <thead>
-        <tr><td>Volume</td><td>Latest</td><td>Bid</td><td>High</td><td>Currency</td>
-        </tr>
-    </thead>
-    <tbody></tbody>
-</table></div>
-    </li>
-    <li>
-      <div class="collapsible-header">EUR</div>
-      <div class="collapsible-body"><p class="modalinfo"></p></div>
-    </li>
-    <li>
-      <div class="collapsible-header">YEN</div>
-      <div class="collapsible-body"><p class="modalinfo"></p></div>
-    </li>
-    <li>
-      <div class="collapsible-header">YEN</div>
-      <div class="collapsible-body"><p class="modalinfo"></p></div>
-    </li>
-    <li>
-      <div class="collapsible-header">YEN</div>
-      <div class="collapsible-body"><p class="modalinfo"></p></div>
-    </li>
-  </ul>
+      <div id="currencylabel" class="collapsible-header"></div>
+      <div id="cbody" class="collapsible-body">
+      <table id="theTable">
+          <thead>
+            <tr>
+           <td>Volume</td>
+           <td>Latest</td>
+           <td>Bid</td>
+           <td>High</td>
+            </tr>
+          </thead>
+        <tbody></tbody>
+      </table>
+      </ul>
     </div>
-  </div>
+    </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <ol>
+          <li><h4>Volume<h4></li>
+          <p>total trade volume of day in BTC.</p>
+          <li><h4>Latest/Latest-trade<h4></li>
+          <p>unixtime of latest trade.</p>
+          <li><h4>Bid<h4></li>
+          <p>highest bid price</p>
+          <li><h4>High</h4></li>
+          <p>highest trade during day</p>
+        </ol>
+      </div>
+    </div>
 
 
  <div class="parallax-container">
