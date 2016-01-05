@@ -34,5 +34,8 @@ border-collapse: collapse;
 table td {
 border: solid 1px black;padding:2px;
 }
-
+#class {
+  height: 3px;
+  background-color: black;
+}
 

@@ -11,7 +11,7 @@ var bitcoinApiUrl = "https://crossorigin.me/https://api.bitcoincharts.com/v1/mar
 $(document).ready(function(){
   $(".btn").on("click", function(){
     var userCurrency = $('#userCurrency option:selected').text();
-    $("#currencylabel").append(userCurrency);
+    $("#div1").append("<p id='currencylabel' />");
     $.ajax({
       type: "GET",
       url: bitcoinApiUrl,
@@ -22,21 +22,31 @@ $(document).ready(function(){
         {
           if(currency[i].currency == userCurrency)
           {
-              var $tr = $("<tr />");
+              var $tr = $("<tr class='hello' />");
               $tr.append( $("<td />").text(currency[i].volume) );
               $tr.append( $("<td />").text(currency[i].latest_trade) );
               $tr.append( $("<td />").text(currency[i].bid) );
-              $tr.append( $("<td />").text(currency[i].high) );
-                     
+              $tr.append( $("<td />").text(currency[i].high) );     
               $("#theTable tbody").append($tr);
+              
               
           }
         }
+        $("#currencylabel").append(userCurrency);
       }
       });
     });
   });
 
+$(".btn").on("click", function(){
+   if($(".hello").length > 0) $(".hello").remove(); 
+   // rest of click handler
+});
+
+$(".btn").on("click", function(){
+   if($("#currencylabel").length > 0) $("#currencylabel").remove(); 
+   // rest of click handler
+});
 
 
 
