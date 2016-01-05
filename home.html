@@ -21,42 +21,74 @@
   <!-- nav end -->
   <div class="section white">
     <div class="row container">
-      <div class="input-field" class="active">
-        <label for="date">Pick a date</label>
-        <input id="userDate" type="date" class="datepicker">
-       <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+    <!-- currency select -->
+<label class="">
+    <span class="">Pick a currency</span>
+      <select id="userCurrency" style="display: inline; width: auto; vertical-align: inherit;">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option>JPY</option>
+    <option>GBP</option>
+    <option>CHF</option>
+    <option>CAD</option>
+    <option>AUD</option>
+    <option>MXN</option>
+    <option>CNY</option>
+    <option>NZD</option>
+    <option>SEK</option>
+    <option>RUB</option>
+    <option>HKD</option>
+    <option>NOK</option>
+    <option>SGD</option>
+    <option>TRY</option>
+    <option>KRW</option>
+    <option>ZAR</option>
+    <option>BRL</option>
+    <option>INR</option>
+  </select>
+</label>
+<!-- select end -->
+       <a id="btn" class="waves-effect waves-light btn modal-trigger" href="#modal1">Bitcoin Information</a>
+       <a id="btn" class="waves-effect waves-light btn modal-trigger" href="#modal2">Help</a>
       </div>
     </div>
   </div>
 <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-     <ul class="collection">
-      <li class="collection-item avatar">
-        <img src="pic/images.png" alt="" class="circle">
-        <span class="title"><i class="fa fa-btc"></i></span>
-        <p class="modalinfo"></p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-      <li class="collection-item avatar">
-        <i class="material-icons circle">folder</i>
-        <span class="title">BitStock</span>
-        <p> <br>
-           
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-      <li class="collection-item avatar">
-        <i class="material-icons circle green">insert_chart</i>
-        <span class="title">Weather</span>
-        <p>Tempature: <br>
-           Humdity:
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-     </ul>
+      <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div id="div1" class="collapsible-header"></div>
+      <div id="cbody" class="collapsible-body">
+      <table id="theTable">
+          <thead>
+            <tr>
+           <td>Volume</td>
+           <td>Latest</td>
+           <td>Bid</td>
+           <td>High</td>
+            </tr>
+          </thead>
+        <tbody></tbody>
+      </table>
+      </ul>
     </div>
-  </div>
+    </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <ul>
+          <li><h4>Volume<h4></li>
+          <p>total trade volume of day in BTC.</p>
+          <li><h4>Latest/Latest-trade<h4></li>
+          <p>unixtime of latest trade.</p>
+          <li><h4>Bid<h4></li>
+          <p>highest bid price</p>
+          <li><h4>High</h4></li>
+          <p>highest trade during day</p>
+        </ul>
+      </div>
+    </div>
 
 
  <div class="parallax-container">

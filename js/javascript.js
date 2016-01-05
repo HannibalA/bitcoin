@@ -5,42 +5,56 @@ $('.datepicker').pickadate({
 $(document).ready(function(){
       $('.parallax').parallax();
     });
+var newP = $("<p>")
 var userDate = ("#userDate")
 var bitcoinApiUrl = "https://crossorigin.me/https://api.bitcoincharts.com/v1/markets.json";
 $(document).ready(function(){
   $(".btn").on("click", function(){
+    var userCurrency = $('#userCurrency option:selected').text();
+    $("#div1").append("<p id='currencylabel' />");
     $.ajax({
       type: "GET",
       url: bitcoinApiUrl,
+      dataType: "json",
       success: function(currency) {
-        // parse currency
-        currency = JSON.parse(currency);
         // loop through currency
-        for(var i = 0; i < currency.length; i++) {
-          console.log(currency[i]); //this is the object
-          //use dot notation to get object values
-          var volume = currency[i].volume,
-          latestTrade = currency[i].latest_trade,
-          bid = currency[i].bid,
-          high = currency[i].high,
-          currencyString = currency[i].currency;
-          
-          //Create a string to log
-          var list = "Volume:"+volume+"\n"+"Latest Trade: "+latestTrade+"\n"+"Bid: "+bid+"\n"+"High: "+high+"\n"+"Currency: "+currencyString+"\n"+"\n"+"\n";
-          // log the string
-          $(document).ready(function() {
-          $(".modalinfo").append(list) ;
-        })
+        for (var i = 0; i < currency.length; i++) 
+        {
+          if(currency[i].currency == userCurrency)
+          {
+              var $tr = $("<tr class='hello' />");
+              $tr.append( $("<td />").text(currency[i].volume) );
+              $tr.append( $("<td />").text(currency[i].latest_trade) );
+              $tr.append( $("<td />").text(currency[i].bid) );
+              $tr.append( $("<td />").text(currency[i].high) );     
+              $("#theTable tbody").append($tr);
+              
+              
+          }
+        }
+        $("#currencylabel").append(userCurrency);
       }
-
-      
-      }
+      });
     });
   });
+
+$(".btn").on("click", function(){
+   if($(".hello").length > 0) $(".hello").remove(); 
+   // rest of click handler
+});
+
+$(".btn").on("click", function(){
+   if($("#currencylabel").length > 0) $("#currencylabel").remove(); 
+   // rest of click handler
 });
 
 
 
+ $(document).ready(function(){
+    $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+  });
 
 $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
