@@ -29,5 +29,14 @@ padding-bottom: 30px;
  margin-left: 315px;
  text-align: center;
 }
+#theTable
+{
+border-collapse: collapse;  
+}
+
+#theTable td
+{
+border: solid 1px black;padding:2px;
+}
 
 

@@ -31,30 +31,34 @@
 <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-     <ul class="collection">
-      <li class="collection-item avatar">
-        <img src="pic/images.png" alt="" class="circle">
-        <span class="title"><i class="fa fa-btc"></i></span>
-        <p class="modalinfo"></p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-      <li class="collection-item avatar">
-        <i class="material-icons circle">folder</i>
-        <span class="title">BitStock</span>
-        <p> <br>
-           
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-      <li class="collection-item avatar">
-        <i class="material-icons circle green">insert_chart</i>
-        <span class="title">Weather</span>
-        <p>Tempature: <br>
-           Humdity:
-        </p>
-        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-      </li>
-     </ul>
+      <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">USD</div>
+      <div class="collapsible-body"><table id="theTable">
+    <thead>
+        <tr><td>Volume</td><td>Latest</td><td>Bid</td><td>High</td><td>Currency</td>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table></div>
+    </li>
+    <li>
+      <div class="collapsible-header">EUR</div>
+      <div class="collapsible-body"><p class="modalinfo"></p></div>
+    </li>
+    <li>
+      <div class="collapsible-header">YEN</div>
+      <div class="collapsible-body"><p class="modalinfo"></p></div>
+    </li>
+    <li>
+      <div class="collapsible-header">YEN</div>
+      <div class="collapsible-body"><p class="modalinfo"></p></div>
+    </li>
+    <li>
+      <div class="collapsible-header">YEN</div>
+      <div class="collapsible-body"><p class="modalinfo"></p></div>
+    </li>
+  </ul>
     </div>
   </div>
 
