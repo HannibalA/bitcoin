@@ -96,6 +96,7 @@ function geoFindMe() {
     var latitude  = position.coords.latitude;
     var longitude = position.coords.longitude;
     var comma = ","
+    var current = "Current Temp"
 var weatherApi = "https://crossorigin.me/https://api.forecast.io/forecast/"
 var apiKey = "249d2fb13a3d21021e91fe1423f4b304/"
 $(document).ready(function(){
@@ -106,6 +107,7 @@ $.ajax({
       success: function(getWeather) {
       console.log(getWeather.currently.temperature)
       $("#weathertest").append(far + " " + getWeather.currently.temperature)
+      $("#current").append(current)
       }
     });
 });
