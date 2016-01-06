@@ -10,7 +10,7 @@ var userDate = ("#userDate")
 var bitcoinApiUrl = "https://crossorigin.me/http://api.bitcoincharts.com/v1/weighted_prices.json";
 $(document).ready(function(){
   $(".btn").on("click", function(){
-    var currencySymbol = {"USD":"$", "EUR":"\u20AC", "GBP":"\u00A3", "CHF":"", "CAD":"C$", "AUD":"A$", "MXN":"\u20B1", "CNY":"\u00A5", "NZD":"NZ$", "SEK":"kr ", "RUB":"\u20BD", "HKD":"HK$", "NOK":"kr ", "SGD":"S$", "ARS":"$", "CZK":"KC$", "ZAR":"R ", "BRL":"R$", "INR":"\u20B9", "IDR":"Rp ", "DKK":"kr ", "ILS":"\u20AA", "LTC":"", "NMC":"", "PLN":"zł", "THB":"\u0E3F", "XRP":"XRP "};
+    var currencySymbol = {"USD":"$", "EUR":"\u20AC", "GBP":"\u00A3", "CHF":"", "CAD":"C$", "AUD":"A$", "MXN":"\u20B1", "CNY":"\u00A5", "NZD":"NZ$", "SEK":"kr ", "RUB":"\u20BD", "HKD":"HK$", "NOK":"kr ", "SGD":"S$", "ARS":"$", "CZK":"KC$", "ZAR":"R ", "BRL":"R$", "INR":"\u20B9", "IDR":"Rp ", "DKK":"kr ", "ILS":"\u20AA", "LTC":"", "NMC":"", "PLN":"z$ ", "THB":"\u0E3F", "XRP":"XRP "};
     var userCurrency = $('#userCurrency option:selected').text();
     $("#div1").append("<p id='currencylabel' />");
     $.ajax({
@@ -63,5 +63,20 @@ $(".btn").on("click", function(){
 $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal();
+  });
+
+$(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                  $('html,body').animate({
+                      scrollTop: target.offset().top
+                  }, 1000);
+                  return false;
+              }
+          }
+      });
   });
           
