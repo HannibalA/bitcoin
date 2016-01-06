@@ -23,10 +23,10 @@ $(document).ready(function(){
           if(currency[i].currency == userCurrency)
           {
               var $tr = $("<tr class='hello' />");
-              $tr.append( $("<td />").text(currency[i].volume) );
-              $tr.append( $("<td />").text(currency[i].latest_trade) );
-              $tr.append( $("<td />").text(currency[i].bid) );
-              $tr.append( $("<td />").text(currency[i].high) );     
+              $tr.append( $("<td />").text(currency[i].volume || "Information Unavailable") );
+              $tr.append( $("<td />").text(currency[i].latest_trade || "Information Unavailable") );
+              $tr.append( $("<td />").text(currency[i].bid || "Information Unavailable") );
+              $tr.append( $("<td />").text(currency[i].high || "Information Unavailable") );     
               $("#theTable tbody").append($tr);
               
               
