@@ -9,11 +9,11 @@
 </head>
 <body>
 <!-- nav start -->
-<nav>
+<nav id="place1">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo center"><img id="bitcoinlogo" src="pic/bitcoin1.png" width="60" height="90"></a>
+      <a href="#" class="brand-logo center"><i class="fa fa-btc"></i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#">About Us</a></li>
+        <li><a href="#wel">About Us</a></li>
         <li><a href="#">More Bitcoin Stuff</a></li>
       </ul>
     </div>
@@ -55,8 +55,8 @@
   </select>
 </label>
 <!-- select end -->
-       <a id="btn" class="waves-effect waves-light btn modal-trigger" href="#modal1">Bitcoin Information</a>
-       <a id="btn" class="waves-effect waves-light btn modal-trigger" href="#modal2">Help</a>
+       <a id="btn" class="waves-effect waves-light btn modal-trigger"  href="#modal1">Bitcoin Information</a>
+       <a id="btn2" class="waves-effect waves-light btn modal-trigger" href="#modal2">Help</a>
       </div>
     </div>
   </div>
@@ -83,16 +83,111 @@
     </div>
     <div id="modal2" class="modal">
       <div class="modal-content">
-        <ul>
-          <li><h4>Volume<h4></li>
-          <p>total trade volume of day in BTC.</p>
-          <li><h4>Latest/Latest-trade<h4></li>
-          <p>unixtime of latest trade.</p>
-          <li><h4>Bid<h4></li>
-          <p>highest bid price</p>
-          <li><h4>High</h4></li>
-          <p>highest trade during day</p>
-        </ul>
+        <table class="bordered">
+          <thead>
+           <th><h5>Currency Codes</h5></th>
+           <th><h5>Country Name</h5></th>
+           <th><h5>Other Info</h5></th>
+          </thead>
+        <tbody>
+          <td>
+            <ul>
+            <!-- country codes help menu -->
+              <li>USD</li>
+              <li>EUR</li>
+              <li>GBP</li>
+              <li>CHF</li>
+              <li>CAD</li>
+              <li>AUD</li>
+              <li>MXN</li>
+              <li>CNY</li>
+              <li>NZD</li>
+              <li>SEK</li>
+              <li>RUB</li>
+              <li>HKD</li>
+              <li>NOK</li>
+              <li>SGD</li>
+              <li>ARS</li>
+              <li>CZK</li>
+              <li>ZAR</li>
+              <li>BRL</li>
+              <li>INR</li>
+              <li>IDR</li>
+              <li>DKK</li>
+              <li>ILS</li>
+              <li>LTC</li>
+              <li>NMC</li>
+              <li>PLN</li>
+              <li>THB</li>
+              <li>XRP</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+            <!-- country name help menu -->
+              <li>country</li>
+              <li>country1</li>
+              <li>country2</li>
+              <li>country3</li>
+              <li>country4</li>
+              <li>country5</li>
+              <li>country6</li>
+              <li>country7</li>
+              <li>country8</li>
+              <li>country9</li>
+              <li>country10</li>
+              <li>country11</li>
+              <li>country12</li>
+              <li>country13</li>
+              <li>country14</li>
+              <li>country15</li>
+              <li>country16</li>
+              <li>country17</li>
+              <li>country18</li>
+              <li>country19</li>
+              <li>country20</li>
+              <li>country21</li>
+              <li>country22</li>
+              <li>country23</li>
+              <li>country24</li>
+              <li>country25</li>
+              <li>country26</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+            <!-- other info help menu -->
+              <li>info</li>
+              <li>info1</li>
+              <li>info2</li>
+              <li>info3</li>
+              <li>info4</li>
+              <li>info5</li>
+              <li>info6</li>
+              <li>info7</li>
+              <li>info8</li>
+              <li>info9</li>
+              <li>info10</li>
+              <li>info11</li>
+              <li>info12</li>
+              <li>info13</li>
+              <li>info14</li>
+              <li>info15</li>
+              <li>info16</li>
+              <li>info17</li>
+              <li>info18</li>
+              <li>info19</li>
+              <li>info20</li>
+              <li>info21</li>
+              <li>info22</li>
+              <li>info23</li>
+              <li>info24</li>
+              <li>info25</li>
+              <li>info26</li>
+            </ul>
+          </td>
+        </tbody>
+      </table>
       </div>
     </div>
 
@@ -101,10 +196,15 @@
     <div class="parallax"><img src="pic/bitcoinmain.png"></div>
   </div>
   <!-- History -->
-  <div id="hidden" class="section white">
+  <div id="wel" class="section white">
     <div id="hidden" class="row container">
-      <p id="hidden" class="flow-text">&euro;</p>
-      <p id="hidden" class="flow-text"></p> 
+      <h2><p class="col s12"  >Welcome to the Bitcoin Price Finder</p></h2>
+      <p id="hidden" class="flow-text col s12">Brought to you by The_Squad </p>
+      <p id="hidden" class="flow-text col s12">Select A Currency. Press Button. And Done. That Easy <i id="check" class="fa fa-check"></i></p>
+      <a class="col 4" href="#place1">Take Me There !</a>
+      <p id="hidden" class="flow-text col s12">We also check the weather for you <i class="fa fa-cloud"></i></p>
+      <button class="col s2" onclick="geoFindMe()">Find My Weather!</button>
+      <p class="col s6" id="weathertest"></p>
     </div>
   </div>
   <!-- History -->

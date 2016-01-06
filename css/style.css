@@ -38,4 +38,10 @@ border: solid 1px black;padding:2px;
   height: 3px;
   background-color: black;
 }
+#btn {
+  padding-right: 10px;
+}
 
+#check {
+  color: green;
+}
