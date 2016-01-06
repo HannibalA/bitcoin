@@ -7,9 +7,10 @@ $(document).ready(function(){
     });
 var newP = $("<p>")
 var userDate = ("#userDate")
-var bitcoinApiUrl = "https://crossorigin.me/https://api.bitcoincharts.com/v1/markets.json";
+var bitcoinApiUrl = "https://crossorigin.me/http://api.bitcoincharts.com/v1/weighted_prices.json";
 $(document).ready(function(){
   $(".btn").on("click", function(){
+    var currencySymbol = {"USD":"$", "EUR":"€"};
     var userCurrency = $('#userCurrency option:selected').text();
     $("#div1").append("<p id='currencylabel' />");
     $.ajax({
@@ -18,21 +19,24 @@ $(document).ready(function(){
       dataType: "json",
       success: function(currency) {
         // loop through currency
-        for (var i = 0; i < currency.length; i++) 
-        {
-          if(currency[i].currency == userCurrency)
+        
+          if (userCurrency in currency)
           {
               var $tr = $("<tr class='hello' />");
-              $tr.append( $("<td />").text(currency[i].volume || "Information Unavailable") );
-              $tr.append( $("<td />").text(currency[i].latest_trade || "Information Unavailable") );
-              $tr.append( $("<td />").text(currency[i].bid || "Information Unavailable") );
-              $tr.append( $("<td />").text(currency[i].high || "Information Unavailable") );     
+              $tr.append( $("<td />").text(currencySymbol [userCurrency]+currency[userCurrency]['7d'] ));
+              $tr.append( $("<td />").text(currencySymbol [userCurrency]+currency[userCurrency]['24h'] ));
+              $tr.append( $("<td />").text(currencySymbol [userCurrency]+currency[userCurrency]['30d'] ));
+              console.log("I am here");
+              console.log($tr);     
               $("#theTable tbody").append($tr);
               
               
           }
-        }
         $("#currencylabel").append(userCurrency);
+        console.log(userCurrency)
+        console.log(currency)
+        console.log(currency[userCurrency])
+        console.log($tr)
       }
       });
     });
