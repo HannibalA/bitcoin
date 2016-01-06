@@ -11,9 +11,9 @@
 <!-- nav start -->
 <nav id="place1">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo center"><img id="bitcoinlogo" src="pic/bitcoin1.png" width="60" height="90"></a>
+      <a href="#" class="brand-logo center"><i class="fa fa-btc"></i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#">About Us</a></li>
+        <li><a href="#wel">About Us</a></li>
         <li><a href="#">More Bitcoin Stuff</a></li>
       </ul>
     </div>
@@ -55,8 +55,8 @@
   </select>
 </label>
 <!-- select end -->
-       <a id="btn" class="waves-effect waves-light btn modal-trigger" href="#modal1">Bitcoin Information</a>
-       <a id="btn" class="waves-effect waves-light btn modal-trigger" href="#modal2">Help</a>
+       <a id="btn" class="waves-effect waves-light btn modal-trigger"  href="#modal1">Bitcoin Information</a>
+       <a id="btn2" class="waves-effect waves-light btn modal-trigger" href="#modal2">Help</a>
       </div>
     </div>
   </div>
@@ -196,13 +196,15 @@
     <div class="parallax"><img src="pic/bitcoinmain.png"></div>
   </div>
   <!-- History -->
-  <div id="hidden" class="section white">
+  <div id="wel" class="section white">
     <div id="hidden" class="row container">
-      <h2><p id="hidden" >Welcome to the Bitcoin Price Finder</p></h2>
-      <p id="hidden" class="flow-text">Brought to you by The_Squad.</p> 
-      <br>
-      <p id="hidden" class="flow-text">Select A Currency. Press Button. And Done. That Easy <i class="fa fa-check-circle"></i></p>
-      <a href="#place1">Take Me There !</a>
+      <h2><p class="col s12"  >Welcome to the Bitcoin Price Finder</p></h2>
+      <p id="hidden" class="flow-text col s12">Brought to you by The_Squad </p>
+      <p id="hidden" class="flow-text col s12">Select A Currency. Press Button. And Done. That Easy <i id="check" class="fa fa-check"></i></p>
+      <a class="col 4" href="#place1">Take Me There !</a>
+      <p id="hidden" class="flow-text col s12">We also check the weather for you <i class="fa fa-cloud"></i></p>
+      <button class="col s2" onclick="geoFindMe()">Find My Weather!</button>
+      <p class="col s6" id="weathertest"></p>
     </div>
   </div>
   <!-- History -->

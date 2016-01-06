@@ -73,10 +73,53 @@ $(function() {
               if (target.length) {
                   $('html,body').animate({
                       scrollTop: target.offset().top
-                  }, 1000);
+                  }, 800);
                   return false;
               }
           }
       });
   });
+
+
+
+
+function geoFindMe() {
+  var output = document.getElementById("out");
+
+  if (!navigator.geolocation){
+    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+    return;
+  }
+
+  function success(position) {
+    var far = "&#8457;"
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    var comma = ","
+var weatherApi = "https://crossorigin.me/https://api.forecast.io/forecast/"
+var apiKey = "249d2fb13a3d21021e91fe1423f4b304/"
+$(document).ready(function(){
+$.ajax({
+      type: "GET",
+      url: weatherApi + apiKey + latitude + comma + longitude ,
+      dataType: "json",
+      success: function(getWeather) {
+      console.log(getWeather.currently.temperature)
+      $("#weathertest").append(far + " " + getWeather.currently.temperature)
+      }
+    });
+});
+    
+  };
+
+  function error() {
+    alert("Unable to retrieve your location");
+  };
+
+  // output.innerHTML = "<p>Locating…</p>";
+
+  navigator.geolocation.getCurrentPosition(success, error);
+}
+
+
           
