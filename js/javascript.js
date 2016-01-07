@@ -26,17 +26,17 @@ $(document).ready(function(){
               $tr.append( $("<td />").text(currencySymbol [userCurrency]+currency[userCurrency]['7d'] ));
               $tr.append( $("<td />").text(currencySymbol [userCurrency]+currency[userCurrency]['24h'] ));
               $tr.append( $("<td />").text(currencySymbol [userCurrency]+currency[userCurrency]['30d'] ));
-              console.log("I am here");
-              console.log($tr);     
+              // console.log("I am here");
+              // console.log($tr);     
               $("#theTable tbody").append($tr);
               
               
           }
         $("#currencylabel").append(userCurrency);
-        console.log(userCurrency)
-        console.log(currency)
-        console.log(currency[userCurrency])
-        console.log($tr)
+        // console.log(userCurrency)
+        // console.log(currency)
+        // console.log(currency[userCurrency])
+        // console.log($tr)
       }
       });
     });
@@ -105,7 +105,7 @@ $.ajax({
       url: weatherApi + apiKey + latitude + comma + longitude ,
       dataType: "json",
       success: function(getWeather) {
-      console.log(getWeather.currently.temperature)
+      console.log(getWeather.currently)
       $("#weathertest").append(far + " " + getWeather.currently.temperature)
       $("#current").append(current)
       }
