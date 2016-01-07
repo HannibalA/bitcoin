@@ -6,7 +6,7 @@
 
 *  Provide weather based on user's geolocation.
 
-
+*  Easy access for bilingual user's.
 
 ### Technologies Used
 * HTML
@@ -21,7 +21,7 @@ http://my.herokuapp.com/
 ### API's Used
 - API 1 - https://bitcoincharts.com/about/markets-api/
 - API 2 - https://developer.forecast.io/docs/v2
-
+- API 3 - https://translate.yandex.net/api/v1.5
 
 ### Trello Link
 
