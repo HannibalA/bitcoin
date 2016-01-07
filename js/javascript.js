@@ -6,48 +6,122 @@ $(document).ready(function(){
       $('.parallax').parallax();
     });
 
-var bitcoinApiUrl = "https://crossorigin.me/https://api.bitcoincharts.com/v1/markets.json";
+var newP = $("<p>")
+var userDate = ("#userDate")
+var bitcoinApiUrl = "https://crossorigin.me/http://api.bitcoincharts.com/v1/weighted_prices.json";
 $(document).ready(function(){
   $(".btn").on("click", function(){
+    var currencySymbol = {"USD":"$", "EUR":"\u20AC", "GBP":"\u00A3", "CHF":"", "CAD":"C$", "AUD":"A$", "MXN":"\u20B1", "CNY":"\u00A5", "NZD":"NZ$", "SEK":"kr ", "RUB":"\u20BD", "HKD":"HK$", "NOK":"kr ", "SGD":"S$", "ARS":"$", "CZK":"KC$", "ZAR":"R ", "BRL":"R$", "INR":"\u20B9", "IDR":"Rp ", "DKK":"kr ", "ILS":"\u20AA", "LTC":"", "NMC":"", "PLN":"z$ ", "THB":"\u0E3F", "XRP":"XRP "};
+    var userCurrency = $('#userCurrency option:selected').text();
+    $("#div1").append("<p id='currencylabel' />");
     $.ajax({
       type: "GET",
       url: bitcoinApiUrl,
+      dataType: "json",
       success: function(currency) {
-        // parse currency
-        currency = JSON.parse(currency);
         // loop through currency
-        for(var i = 0; i < currency.length; i++) {
-          console.log(currency[i]); //this is the object
-          //use dot notation to get object values
-          var volume = currency[i].volume,
-          latestTrade = currency[i].latest_trade,
-          bid = currency[i].bid,
-          high = currency[i].high,
-          currencyString = currency[i].currency;
-          
-          //Create a string to log
-          var curObjLog = "Volume:"+volume+"\n"+"Latest Trade: "+latestTrade+"\n"+"Bid: "+bid+"\n"+"High: "+high+"\n"+"Currency: "+currencyString+"\n"+"\n"+"\n";
-          // log the string
-          console.log(curObjLog);
-        }
-      },
-      error:function(jqXHR, textStatus, errorThrown){
-        alert("something went wrong man!");
+        
+          if (userCurrency in currency)
+          {
+              var $tr = $("<tr class='hello' />");
+              $tr.append( $("<td />").text(currencySymbol [userCurrency]+currency[userCurrency]['7d'] ));
+              $tr.append( $("<td />").text(currencySymbol [userCurrency]+currency[userCurrency]['24h'] ));
+              $tr.append( $("<td />").text(currencySymbol [userCurrency]+currency[userCurrency]['30d'] ));
+              // console.log("I am here");
+              // console.log($tr);     
+              $("#theTable tbody").append($tr);
+              
+              
+          }
+        $("#currencylabel").append(userCurrency);
+        // console.log(userCurrency)
+        // console.log(currency)
+        // console.log(currency[userCurrency])
+        // console.log($tr)
       }
+      });
     });
   });
+
+$(".btn").on("click", function(){
+   if($(".hello").length > 0) $(".hello").remove(); 
+   // rest of click handler
 });
+
+$(".btn").on("click", function(){
+   if($("#currencylabel").length > 0) $("#currencylabel").remove(); 
+   // rest of click handler
+});
+
+
+
+ $(document).ready(function(){
+    $('.collapsible').collapsible({
+      accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+    });
+  });
+
 
 $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal();
   });
 
+$(function() {
+      $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                  $('html,body').animate({
+                      scrollTop: target.offset().top
+                  }, 800);
+                  return false;
+              }
+          }
+      });
+  });
 
 
 
 
+function geoFindMe() {
+  var output = document.getElementById("out");
 
+  if (!navigator.geolocation){
+    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
+    return;
+  }
 
-2
-          
+  function success(position) {
+    var far = "&#8457;"
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    var comma = ","
+    var current = "Current Temp"
+var weatherApi = "https://crossorigin.me/https://api.forecast.io/forecast/"
+var apiKey = "249d2fb13a3d21021e91fe1423f4b304/"
+$(document).ready(function(){
+$.ajax({
+      type: "GET",
+      url: weatherApi + apiKey + latitude + comma + longitude ,
+      dataType: "json",
+      success: function(getWeather) {
+      console.log(getWeather.currently)
+      $("#weathertest").append(far + " " + getWeather.currently.temperature)
+      $("#current").append(current)
+      }
+    });
+});
+    
+  };
+
+  function error() {
+    alert("Unable to retrieve your location");
+  };
+
+  // output.innerHTML = "<p>Locating…</p>";
+
+  navigator.geolocation.getCurrentPosition(success, error);
+}
+         

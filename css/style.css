@@ -24,10 +24,25 @@ padding-bottom: 30px;
   background-color:
 }
 
-.input-field {
-  max-width: 30%;
- margin-left: 315px;
- text-align: center;
+label {       
+ margin-left: 210px;
+}
+/*table {
+border-collapse: collapse;  
+}*/
+
+
+/*table td {
+border: solid 1px black;padding:2px;
+}*/
+#class {
+  height: 3px;
+  background-color: black;
+}
+#btn {
+  padding-right: 10px;
 }
 
-
+#check {
+  color: green;
+}
