@@ -32,7 +32,7 @@ $(document).ready(function(){
               
               
           }
-        $("#currencylabel").append(userCurrency);
+        $("#currencylabel").append(" " + userCurrency);
         // console.log(userCurrency)
         // console.log(currency)
         // console.log(currency[userCurrency])
@@ -118,7 +118,7 @@ $.ajax({
   };
 
   function error() {
-    alert("Unable to retrieve your location");
+    console.log("Unable to retrieve your location");
   };
 
   // output.innerHTML = "<p>Locating…</p>";
@@ -155,6 +155,26 @@ $(window).scroll(function() {
     var topOfWindow = $(window).scrollTop();
       if (imagePos < topOfWindow+300) {
         $(this).addClass("slideUp");
+      }
+    });
+  });
+$('#weatherc').on("click", function() {
+    $('#weatherc').each(function(){
+        $(this).addClass("");
+    });
+  });
+$('#weatherc').on("mouseenter", function() {
+    $('#weatherc').each(function(){
+        $(this).addClass("");    
+    });
+  });
+$(window).scroll(function() {
+    $('#linktomain').each(function(){
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+300) {
+        $(this).addClass("fadeIn");
       }
     });
   });

@@ -10,13 +10,15 @@
   
 </head>
 <body>
+
 <!-- nav start -->
 <nav id="place1">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center"><i class="fa fa-btc"></i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#wel">About Us</a></li>
+        <li><a href="#wel">About This Site</a></li>
         <li><a href="#">More Bitcoin Stuff</a></li>
+        <li id="try"><a id="weathers" class="waves-effect waves-orange btn" onclick="geoFindMe();">Get Weather</a></li>
       </ul>
     </div>
   </nav>
@@ -89,9 +91,41 @@
           <thead>
            <th><h5>Currency Codes</h5></th>
            <th><h5>Country Name</h5></th>
-           <th><h5>Other Info</h5></th>
+           
           </thead>
         <tbody>
+        <td>
+            <ul>
+            <!-- country name help menu -->
+              <li>USD</li>
+              <li>EUR</li>
+              <li>GBP</li>
+              <li>CHF</li>
+              <li>CAD</li>
+              <li>AUD</li>
+              <li>MXN</li>
+              <li>CNY</li>
+              <li>NZD</li>
+              <li>SEK</li>
+              <li>RUB</li>
+              <li>HKD</li>
+              <li>NOK</li>
+              <li>SGD</li>
+              <li>ARS</li>
+              <li>CZK</li>
+              <li>ZAR</li>
+              <li>BRL</li>
+              <li>INR</li>
+              <li>IDR</li>
+              <li>DKK</li>
+              <li>ILS</li>
+              <li>LTC</li>
+              <li>NMC</li>
+              <li>PLN</li>
+              <li>THB</li>
+              <li>XRP</li>
+            </ul>
+          </td>
           <td>
             <ul>
             <!-- country codes help menu -->
@@ -124,6 +158,8 @@
               <li>Ripple </li>
             </ul>
           </td>
+          
+         
         </tbody>
       </table>
       </div>
@@ -137,17 +173,24 @@
   <div id="wel" class="section white">
     <div id="hidden" class="row container">
       <h2><p id="welcome" class="col s12"  >Welcome to the Bitcoin Price Finder</p></h2>
-      <p id="hidden" class="flow-text col s12">Brought to you by The_Squad </p>
       <p id="sum" class="flow-text col s12">Select A Currency. Press Button. And Done. That Easy <i id="check" class="fa fa-check"></i></p>
       <a class="col 4" href="#place1">Take Me There !</a>
-      <p id="hidden" class="flow-text col s16">We also check the weather for you <i class="wi-night-sleet"></i></p>
-      <!-- <button class="col s2" onclick="geoFindMe(); toast();">Find My Weather!</button> -->
-      <a class="btn col s2" onclick="geoFindMe(); toast();">Weather</a>
     </div>
   </div>
   <!-- History -->
    <div id="hidden" class="parallax-container">
     <div id="hidden" class="parallax"><img src="pic/bitcoin2.jpg"></div>
+  </div>
+ <div id="well" class="section white">
+    <div id="hidden" class="row container">
+      <div id="move">
+    <p id="wht" class="flow-text">Brought to you by</p>
+    <h3><a id="" class="" href="https://www.linkedin.com/in/julio-de-la-vega-b6bb46108">J <a href="https://github.com/JulioDVega"><i id="wht" class="fa fa-github-square"></i></a></a>
+    </h3><p id="wht" class="">&</p><h3>
+    <a id="" class="" href="https://www.linkedin.com/in/hannibal-alawode-7691a2106">H <a href="https://github.com/HannibalA"><i id="wht" class="fa fa-github-square"></i></a></a></h3>
+    <a href="#place1"><p id="wht">Take me back</p><i id="wht2" class="fa fa-arrow-circle-o-up fa-2x"></i></a>
+      </div>
+    </div>
   </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
