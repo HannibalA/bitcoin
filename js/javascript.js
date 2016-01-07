@@ -32,7 +32,7 @@ $(document).ready(function(){
               
               
           }
-        $("#currencylabel").append(userCurrency);
+        $("#currencylabel").append(" " + userCurrency);
         // console.log(userCurrency)
         // console.log(currency)
         // console.log(currency[userCurrency])
