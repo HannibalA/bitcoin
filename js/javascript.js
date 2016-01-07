@@ -5,7 +5,6 @@ $('.datepicker').pickadate({
 $(document).ready(function(){
       $('.parallax').parallax();
     });
-
 var newP = $("<p>")
 var userDate = ("#userDate")
 var bitcoinApiUrl = "https://crossorigin.me/http://api.bitcoincharts.com/v1/weighted_prices.json";
@@ -60,7 +59,6 @@ $(".btn").on("click", function(){
       accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
   });
-
 
 $(document).ready(function(){
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
@@ -124,4 +122,6 @@ $.ajax({
 
   navigator.geolocation.getCurrentPosition(success, error);
 }
-         
+
+
+          
