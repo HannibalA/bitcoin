@@ -32,7 +32,7 @@ $(document).ready(function(){
               
               
           }
-        $("#currencylabel").append(userCurrency);
+        $("#currencylabel").append(" " + userCurrency);
         // console.log(userCurrency)
         // console.log(currency)
         // console.log(currency[userCurrency])
@@ -118,7 +118,7 @@ $.ajax({
   };
 
   function error() {
-    alert("Unable to retrieve your location");
+    console.log("Unable to retrieve your location");
   };
 
   // output.innerHTML = "<p>Locating…</p>";
