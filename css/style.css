@@ -55,3 +55,20 @@ border: solid 1px black;padding:2px;
 #weatherc {
   background-color:#a69c0a;
 }
+#linktomain {
+  visibility: hidden;
+}
+#weathers {
+  background-color:transparent;
+}
+#move {
+  text-align: center;
+  vertical-align: center;
+}
+#well {
+  background-color: black !important;
+}
+#wht {
+  color: white;
+  padding-right: 3px;
+}
