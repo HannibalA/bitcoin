@@ -168,5 +168,15 @@ $('#weatherc').on("mouseenter", function() {
         $(this).addClass("");    
     });
   });
+$(window).scroll(function() {
+    $('#linktomain').each(function(){
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+300) {
+        $(this).addClass("fadeIn");
+      }
+    });
+  });
 
           
