@@ -2,14 +2,12 @@
 <html>
 <head>
   <title>Bitcoin</title>
-
-   <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
-
   <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
-
+  <link rel="stylesheet" type="text/css" href="css/animations.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  
 </head>
 <body>
 <!-- nav start -->
@@ -22,7 +20,10 @@
       </ul>
     </div>
   </nav>
-<!-- currency select -->
+  <!-- nav end -->
+  <div class="section white">
+    <div class="row container">
+    <!-- currency select -->
 <label class="">
     <span class="">Pick a currency</span>
       <select id="userCurrency" style="display: inline; width: auto; vertical-align: inherit;">
@@ -58,15 +59,12 @@
 <!-- select end -->
        <a id="btn" class="waves-effect waves-light btn modal-trigger"  href="#modal1">Bitcoin Information</a>
        <a id="btn2" class="waves-effect waves-light btn modal-trigger" href="#modal2">Help</a>
-
       </div>
     </div>
   </div>
 <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-
-
       <ul class="collapsible" data-collapsible="accordion">
     <li>
       <div id="div1" class="collapsible-header"></div>
@@ -196,32 +194,27 @@
     </div>
 
 
-
  <div class="parallax-container">
     <div class="parallax"><img src="pic/bitcoinmain.png"></div>
   </div>
+  <!-- History -->
   <div id="wel" class="section white">
     <div id="hidden" class="row container">
-      <h2><p class="col s12"  >Welcome to the Bitcoin Price Finder</p></h2>
+      <h2><p id="welcome" class="col s12"  >Welcome to the Bitcoin Price Finder</p></h2>
       <p id="hidden" class="flow-text col s12">Brought to you by The_Squad </p>
-      <p id="hidden" class="flow-text col s12">Select A Currency. Press Button. And Done. That Easy <i id="check" class="fa fa-check"></i></p>
+      <p id="sum" class="flow-text col s12">Select A Currency. Press Button. And Done. That Easy <i id="check" class="fa fa-check"></i></p>
       <a class="col 4" href="#place1">Take Me There !</a>
-      <p id="hidden" class="flow-text col s12">We also check the weather for you <i class="fa fa-cloud"></i></p>
-      <button class="col s2" onclick="geoFindMe()">Find My Weather!</button>
-      <div class="col s12">
-      <p id="current"></p>
-      <p id="weathertest"></p>
-      </div>
+      <p id="hidden" class="flow-text col s16">We also check the weather for you <i class="wi-night-sleet"></i></p>
+      <!-- <button class="col s2" onclick="geoFindMe(); toast();">Find My Weather!</button> -->
+      <a class="btn col s2" onclick="geoFindMe(); toast();">Weather</a>
     </div>
   </div>
   <!-- History -->
    <div id="hidden" class="parallax-container">
     <div id="hidden" class="parallax"><img src="pic/bitcoin2.jpg"></div>
-
   </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
 <script type="text/javascript" src="js/javascript.js"></script>
-<script type="text/javascript" src="js/translation.js"></script> 
 </body>
 </html>
