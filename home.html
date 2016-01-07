@@ -3,9 +3,11 @@
 <head>
   <title>Bitcoin</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/animations.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+  
 </head>
 <body>
 <!-- nav start -->
@@ -198,16 +200,13 @@
   <!-- History -->
   <div id="wel" class="section white">
     <div id="hidden" class="row container">
-      <h2><p class="col s12"  >Welcome to the Bitcoin Price Finder</p></h2>
+      <h2><p id="welcome" class="col s12"  >Welcome to the Bitcoin Price Finder</p></h2>
       <p id="hidden" class="flow-text col s12">Brought to you by The_Squad </p>
-      <p id="hidden" class="flow-text col s12">Select A Currency. Press Button. And Done. That Easy <i id="check" class="fa fa-check"></i></p>
+      <p id="sum" class="flow-text col s12">Select A Currency. Press Button. And Done. That Easy <i id="check" class="fa fa-check"></i></p>
       <a class="col 4" href="#place1">Take Me There !</a>
-      <p id="hidden" class="flow-text col s12">We also check the weather for you <i class="fa fa-cloud"></i></p>
-      <button class="col s2" onclick="geoFindMe()">Find My Weather!</button>
-      <div class="col s12">
-      <p id="current"></p>
-      <p id="weathertest"></p>
-      </div>
+      <p id="hidden" class="flow-text col s16">We also check the weather for you <i class="wi-night-sleet"></i></p>
+      <!-- <button class="col s2" onclick="geoFindMe(); toast();">Find My Weather!</button> -->
+      <a class="btn col s2" onclick="geoFindMe(); toast();">Weather</a>
     </div>
   </div>
   <!-- History -->

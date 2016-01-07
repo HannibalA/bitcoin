@@ -106,8 +106,11 @@ $.ajax({
       dataType: "json",
       success: function(getWeather) {
       console.log(getWeather.currently)
+      var $toastContent = $('<ul><li id="current"></li> <br> <li id="weathertest"></li> <li id="summary"></li><ul>');
+      Materialize.toast($toastContent, 5000);
       $("#weathertest").append(far + " " + getWeather.currently.temperature)
       $("#current").append(current)
+      $("#summary").append(getWeather.currently.summary)
       }
     });
 });
@@ -122,6 +125,38 @@ $.ajax({
 
   navigator.geolocation.getCurrentPosition(success, error);
 }
+//   function toast(){
+  
+// };
+$(window).scroll(function() {
+    $('#welcome').each(function(){
+    var imagePos = $(this).offset().top;
 
+    var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+300) {
+        $(this).addClass("fadeIn");
+      }
+    });
+  });
+$(window).scroll(function() {
+    $('#sum').each(function(){
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+300) {
+        $(this).addClass("bigEntrance");
+      }
+    });
+  });
+$(window).scroll(function() {
+    $('#check').each(function(){
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+300) {
+        $(this).addClass("slideUp");
+      }
+    });
+  });
 
           
