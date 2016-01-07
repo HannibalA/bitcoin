@@ -118,7 +118,7 @@ $.ajax({
   };
 
   function error() {
-    alert("Unable to retrieve your location");
+    console.log("Unable to retrieve your location");
   };
 
   // output.innerHTML = "<p>Locating…</p>";
