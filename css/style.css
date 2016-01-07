@@ -45,6 +45,7 @@ border: solid 1px black;padding:2px;
 #check {
   color: green;
   visibility: hidden;
+
 }
 #sum {
   visibility: hidden;
