@@ -52,3 +52,6 @@ border: solid 1px black;padding:2px;
 #welcome {
   visibility: hidden;
 }
+#weatherc {
+  background-color:#a69c0a;
+}

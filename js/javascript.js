@@ -158,5 +158,15 @@ $(window).scroll(function() {
       }
     });
   });
+$('#weatherc').on("click", function() {
+    $('#weatherc').each(function(){
+        $(this).addClass("");
+    });
+  });
+$('#weatherc').on("mouseenter", function() {
+    $('#weatherc').each(function(){
+        $(this).addClass("");    
+    });
+  });
 
           
