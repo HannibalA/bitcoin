@@ -46,7 +46,6 @@ $(document).ready(function() {
       url: bitcoinApiUrl,
       dataType: "json",
       success: function(currency) {
-        // loop through currency
 
         if (userCurrency in currency) {
           var $tr = $("<tr class='hello' />");
@@ -110,13 +109,6 @@ $(function() {
 
 
 function geoFindMe() {
-  var output = document.getElementById("out");
-
-  if (!navigator.geolocation) {
-    output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-    return;
-  }
-
   function success(position) {
     var far = "&#8457;"
     var latitude = position.coords.latitude;
