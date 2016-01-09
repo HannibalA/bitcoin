@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Bitcoin</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
@@ -7,11 +8,13 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-  
+
 </head>
+
 <body>
-<!-- nav start -->
-<nav id="place1">
+
+  <!-- nav start -->
+  <nav id="place1">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo center"><i class="fa fa-btc"></i></a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
@@ -22,79 +25,85 @@
     </div>
   </nav>
   <!-- nav end -->
-  <div id="selector" class="section white">
+  <div class="section white">
     <div class="row container">
-    <!-- currency select -->
-<label class="">
-    <span class="">Pick a currency</span>
-      <select id="userCurrency" style="display: inline; width: auto; vertical-align: inherit;">
-    <option>USD</option>
-    <option>EUR</option>
-    <option>GBP</option>
-    <option>CHF</option>
-    <option>CAD</option>
-    <option>AUD</option>
-    <option>MXN</option>
-    <option>CNY</option>
-    <option>NZD</option>
-    <option>SEK</option>
-    <option>RUB</option>
-    <option>HKD</option>
-    <option>NOK</option>
-    <option>SGD</option>
-    <option>ARS</option>
-    <option>CZK</option>
-    <option>ZAR</option>
-    <option>BRL</option>
-    <option>INR</option>
-    <option>IDR</option>
-    <option>DKK</option>
-    <option>ILS</option>
-    <option>LTC</option>
-    <option>NMC</option>
-    <option>PLN</option>
-    <option>THB</option>
-    <option>XRP</option>
-  </select>
-</label>
-<!-- select end -->
-       <a id="btn" class="waves-effect waves-light btn modal-trigger"  href="#modal1">Bitcoin Information</a>
-       <a id="btn2" class="btn modal-trigger" href="#modal2">Help</a>
-      </div>
+      <!-- currency select -->
+      <label class="">
+        <span class="">Pick a currency</span>
+        <select id="userCurrency" style="display: inline; width: auto; vertical-align: inherit;">
+          <option>USD</option>
+          <option>EUR</option>
+          <option>GBP</option>
+          <option>CHF</option>
+          <option>CAD</option>
+          <option>AUD</option>
+          <option>MXN</option>
+          <option>CNY</option>
+          <option>NZD</option>
+          <option>SEK</option>
+          <option>RUB</option>
+          <option>HKD</option>
+          <option>NOK</option>
+          <option>SGD</option>
+          <option>ARS</option>
+          <option>CZK</option>
+          <option>ZAR</option>
+          <option>BRL</option>
+          <option>INR</option>
+          <option>IDR</option>
+          <option>DKK</option>
+          <option>ILS</option>
+          <option>LTC</option>
+          <option>NMC</option>
+          <option>PLN</option>
+          <option>THB</option>
+          <option>XRP</option>
+        </select>
+      </label>
+      <!-- select end -->
+      <a id="btn" class="waves-effect waves-light btn modal-trigger" href="#modal1">Bitcoin Information</a>
+      <a id="btn2" class="waves-effect waves-light btn modal-trigger" href="#modal2">Help</a>
     </div>
   </div>
-<!-- Modal Structure -->
+  </div>
+  <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
       <ul class="collapsible" data-collapsible="accordion">
-    <li>
-      <div id="div1" class="collapsible-header"></div>
-      <div id="cbody" class="collapsible-body">
-      <table class="highlight" id="theTable">
-          <thead>
-            <tr>
-           <td><h5>7 days</h5></td>
-           <td><h5>30 days</h5></td>
-           <td><h5>24 hours</h5></td>
-            </tr>
-          </thead>
-        <tbody></tbody>
-      </table>
+        <li>
+          <div id="div1" class="collapsible-header"></div>
+          <div id="cbody" class="collapsible-body">
+            <table class="highlight" id="theTable">
+              <thead>
+                <tr>
+                  <td>
+                    <h5>7 days</h5></td>
+                  <td>
+                    <h5>30 days</h5></td>
+                  <td>
+                    <h5>24 hours</h5></td>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
       </ul>
+      </div>
     </div>
-    </div>
-    </div>
-    <div id="modal2" class="modal">
-      <div class="modal-content">
-        <table class="bordered">
-          <thead>
-           <th><h5>Currency Codes</h5></th>
-           <th><h5>Country/Continent Name</h5></th>
-          </thead>
+  </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <table class="bordered">
+        <thead>
+          <th>
+            <h5>Currency Codes</h5></th>
+          <th>
+            <h5>Country Currency</h5></th>
+
+        </thead>
         <tbody>
           <td>
             <ul>
-            <!-- country codes help menu -->
+              <!-- country name help menu -->
               <li>USD</li>
               <li>EUR</li>
               <li>GBP</li>
@@ -126,43 +135,45 @@
           </td>
           <td>
             <ul>
-            <!-- country name help menu -->
-              <li>United States</li>
-              <li>Europe</li>
-              <li>country2</li>
-              <li>country3</li>
-              <li>country4</li>
-              <li>country5</li>
-              <li>country6</li>
-              <li>country7</li>
-              <li>country8</li>
-              <li>country9</li>
-              <li>country10</li>
-              <li>country11</li>
-              <li>country12</li>
-              <li>country13</li>
-              <li>country14</li>
-              <li>country15</li>
-              <li>country16</li>
-              <li>country17</li>
-              <li>country18</li>
-              <li>country19</li>
-              <li>country20</li>
-              <li>country21</li>
-              <li>country22</li>
-              <li>country23</li>
-              <li>country24</li>
-              <li>country25</li>
-              <li>country26</li>
+              <!-- country codes help menu -->
+              <li>Unite States Dollar</li>
+              <li>Euro</li>
+              <li>British Pound</li>
+              <li>Swiss Franc</li>
+              <li>Canadian Dollar</li>
+              <li>Australian Dollar</li>
+              <li>Mexican New Peso </li>
+              <li>China yuan renminbi</li>
+              <li>New Zealand dollar</li>
+              <li>Swedish Krona</li>
+              <li>Russian New Rouble</li>
+              <li>Hong Kong Dollar</li>
+              <li>Norwegian Krone </li>
+              <li>Singapore Dollar</li>
+              <li>Argentinian Nuevo peso</li>
+              <li>Czech Koruna</li>
+              <li>South African Rand</li>
+              <li>Brazil Real</li>
+              <li>Indian Rupee</li>
+              <li>Indonesian Rupiah</li>
+              <li>Danish Krone</li>
+              <li>Israel New Shekel</li>
+              <li>Litecoin</li>
+              <li>Namecoin</li>
+              <li>Polish Zloty</li>
+              <li>Thai Baht</li>
+              <li>Ripple </li>
             </ul>
           </td>
+
+
         </tbody>
       </table>
-      </div>
     </div>
+  </div>
 
 
- <div class="parallax-container">
+  <div class="parallax-container">
     <div class="parallax"><img src="pic/bitcoinmain.png"></div>
   </div>
   <!-- History -->
@@ -170,26 +181,30 @@
     <div id="hidden" class="row container">
       <h2><p id="welcome" class="col s12"  >Welcome to the Bitcoin Price Finder</p></h2>
       <p id="sum" class="flow-text col s12">Select A Currency. Press Button. And Done. That Easy <i id="check" class="fa fa-check"></i></p>
-      <a id="linktomain" class="col 4 change" href="#place1">Take Me There !</a>
+      <a id="linktomain" href="#place1">Take Me There !</a>
     </div>
   </div>
   <!-- History -->
-   <div id="hidden" class="parallax-container">
+  <div id="hidden" class="parallax-container">
     <div id="hidden" class="parallax"><img src="pic/bitcoin2.jpg"></div>
   </div>
   <div id="well" class="section white">
     <div id="hidden" class="row container">
       <div id="move">
-    <p id="wht" class="flow-text">Brought to you by</p>
-    <h3><a id="" class="" href="https://www.linkedin.com/in/julio-de-la-vega-b6bb46108">J <a href="https://github.com/JulioDVega"><i id="wht" class="fa fa-github-square"></i></a></a>
-    </h3><p id="wht" class="">&</p><h3>
+        <p id="wht" class="flow-text">Brought to you by</p>
+        <h3><a id="" class="" href="https://www.linkedin.com/in/julio-de-la-vega-b6bb46108">J <a href="https://github.com/JulioDVega"><i id="wht" class="fa fa-github-square"></i></a></a>
+    </h3>
+        <p id="wht" class="">&</p>
+        <h3>
     <a id="" class="" href="https://www.linkedin.com/in/hannibal-alawode-7691a2106">H <a href="https://github.com/HannibalA"><i id="wht" class="fa fa-github-square"></i></a></a></h3>
-    <a href="#place1"><p id="wht">Take me back</p><i id="wht2" class="fa fa-arrow-circle-o-up fa-2x"></i></a>
+        <a href="#place1">
+          <p id="wht">Take me back</p><i id="wht2" class="fa fa-arrow-circle-o-up fa-2x"></i></a>
       </div>
     </div>
   </div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-<script type="text/javascript" src="js/javascript.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/javascript.js"></script>
 </body>
+
 </html>
