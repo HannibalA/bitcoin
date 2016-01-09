@@ -1,12 +1,12 @@
-$('.datepicker').pickadate({
-  selectMonths: true, // Creates a dropdown to control month
-  selectYears: 15 // Creates a dropdown of 15 years to control year
-});
+// $('.datepicker').pickadate({
+//   selectMonths: true, // Creates a dropdown to control month
+//   selectYears: 15 // Creates a dropdown of 15 years to control year
+// });
+// var newP = $("<p>")
+// var userDate = ("#userDate")
 $(document).ready(function() {
   $('.parallax').parallax();
 });
-var newP = $("<p>")
-var userDate = ("#userDate")
 var bitcoinApiUrl = "https://crossorigin.me/http://api.bitcoincharts.com/v1/weighted_prices.json";
 $(document).ready(function() {
   $(".btn").on("click", function() {
@@ -75,7 +75,6 @@ $(".btn").on("click", function() {
 
 $(".btn").on("click", function() {
   if ($("#currencylabel").length > 0) $("#currencylabel").remove();
-  // rest of click handler
 });
 
 
