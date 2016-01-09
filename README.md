@@ -14,6 +14,8 @@
 * JavaScript 
 * jQuery
 * Materializecss
+* Font Awesome 
+* Google Fonts
 
 ### Deployed Link
 http://my.herokuapp.com/
